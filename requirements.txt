@@ -1,0 +1,4 @@
+# netcheck 运行依赖（Python 3.10+）
+# 安装：python -m pip install -r requirements.txt
+netmiko>=4.1,<5
+PyYAML>=6.0

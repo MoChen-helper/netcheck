@@ -1,0 +1,15 @@
+# 命令模板：按设备的 device_type 取用；设备条目里的 commands 可整体覆盖，
+# extra_commands 可在模板基础上追加命令。
+templates:
+  cisco_ios:
+    - show version
+    - show running-config
+    - show ip interface brief
+  huawei:
+    - display version
+    - display current-configuration
+    - display ip interface brief
+  linux:
+    - hostname
+    - ip addr
+    - cat /etc/os-release

@@ -1,0 +1,23 @@
+# 设备清单示例。字段说明见 README.md。
+# 注意：这是示例配置，运行前请把 REPLACE_ME 换掉；也可以改用 password_env 或 key_file。
+defaults:
+  port: 22
+  timeout: 15
+  retries: 0
+  device_type: cisco_ios
+
+# 并发 worker 数；也可用 --workers 覆盖。
+workers: 4
+
+devices:
+  - name: core-sw-01
+    host: 192.168.56.101
+    username: admin
+    password: "REPLACE_ME"
+    device_type: huawei
+
+  - name: lab-linux
+    host: 192.168.56.102
+    username: tester
+    key_file: ~/.ssh/id_rsa
+    device_type: linux
